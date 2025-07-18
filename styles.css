@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section {
+    --box-size: 300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--box-size), 1fr));
+    grid-auto-rows: var(--box-size);
+    min-height: 100vh;
+}
+
+section>span {
+    border: 1px dashed lightblue;
+    display: grid;
+    place-items: center;
+}
+
+section>span[data-shape]::after {
+    --shape-size: calc(var(--box-size) * 0.8);
+    content: '';
+    display: block;
+    background-color: red;
+}
+
+
+section>span[data-shape="square"]::after {
+    width: var(--shape-size);
+    height: var(--shape-size);
+}
+
+section>span[data-shape="circle"]::after {
+    width: var(--shape-size);
+    height: var(--shape-size);
+    border-radius: 50%;
+}
