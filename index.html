@@ -1,18 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shapes</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <section>
-      <span data-shape="square"></span>
-      <span data-shape="circle"></span>
-      <span data-shape="circle"></span>
-      <span data-shape="circle"></span>
-      <span data-shape="circle"></span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Geometric Shapes Gallery - CSS Animations</title>
+  <meta name="description"
+    content="Explore an interactive collection of 21 geometric shapes with beautiful CSS animations and border effects. Features squares, circles, triangles, and more with hover animations." />
+  <meta name="keywords"
+    content="geometric shapes, CSS animations, interactive gallery, web design, shapes collection, hover effects, geometric art" />
+  <meta name="author" content="Shapes Gallery" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Interactive Geometric Shapes Gallery - CSS Animations" />
+  <meta property="og:description"
+    content="Explore an interactive collection of 21 geometric shapes with beautiful CSS animations and border effects." />
+  <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/603/603563.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Interactive Geometric Shapes Gallery - CSS Animations" />
+  <meta property="twitter:description"
+    content="Explore an interactive collection of 21 geometric shapes with beautiful CSS animations and border effects." />
+  <meta property="twitter:image" content="https://cdn-icons-png.flaticon.com/512/603/603563.png" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/603/603563.png" />
+  <link rel="canonical" href="#" />
+</head>
+
+<body>
+  <!-- Skip navigation link for keyboard users -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>Interactive Geometric Shapes Gallery</h1>
+    <p>Discover a collection of beautifully animated geometric shapes. Hover over each shape to see stunning border
+      animations.</p>
+  </header>
+
+  <main id="main-content">
+    <section aria-labelledby="shapes-heading" class="shapes-gallery">
+      <h2 id="shapes-heading" class="visually-hidden">Geometric Shapes Collection</h2>
+
+      <!-- Visually hidden descriptions for screen readers -->
+      <div class="visually-hidden">
+        <span id="square-desc">A perfect square with equal sides and right angles</span>
+        <span id="circle-desc">A round shape with all points equidistant from the center</span>
+        <span id="rectangle-desc">A four-sided shape with opposite sides equal and parallel</span>
+        <span id="ellipse-desc">An oval shape that is elongated horizontally</span>
+        <span id="semi-circle-up-desc">Half of a circle with the flat edge at the bottom</span>
+        <span id="semi-circle-down-desc">Half of a circle with the flat edge at the top</span>
+        <span id="semi-circle-right-desc">Half of a circle with the flat edge on the left</span>
+        <span id="semi-circle-left-desc">Half of a circle with the flat edge on the right</span>
+        <span id="triangle-up-desc">A triangular shape pointing upward</span>
+        <span id="triangle-down-desc">A triangular shape pointing downward</span>
+        <span id="triangle-right-desc">A triangular shape pointing to the right</span>
+        <span id="triangle-left-desc">A triangular shape pointing to the left</span>
+        <span id="trapezium-desc">A four-sided shape with one pair of parallel sides</span>
+        <span id="parallelogram-desc">A four-sided shape with opposite sides parallel and equal</span>
+        <span id="capsule-desc">A rounded rectangular shape resembling a pill or capsule</span>
+        <span id="leaf-desc">An organic shape resembling a natural leaf</span>
+        <span id="triangle-top-left-desc">A right triangle positioned in the top-left corner</span>
+        <span id="triangle-top-right-desc">A right triangle positioned in the top-right corner</span>
+        <span id="triangle-bottom-left-desc">A right triangle positioned in the bottom-left corner</span>
+        <span id="triangle-bottom-right-desc">A right triangle positioned in the bottom-right corner</span>
+        <span id="rhombus-desc">A diamond-shaped quadrilateral with all sides equal</span>
+      </div>
+      <div class="animation-wrapper" data-shape="square" role="button" tabindex="0" aria-label="Square shape"
+        aria-describedby="square-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="circle" role="button" tabindex="0" aria-label="Circle shape"
+        aria-describedby="circle-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="rectangle" role="button" tabindex="0" aria-label="Rectangle shape"
+        aria-describedby="rectangle-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="ellipse" role="button" tabindex="0" aria-label="Ellipse shape"
+        aria-describedby="ellipse-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="semi-circle-up" role="button" tabindex="0"
+        aria-label="Semi-circle pointing up" aria-describedby="semi-circle-up-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="semi-circle-down" role="button" tabindex="0"
+        aria-label="Semi-circle pointing down" aria-describedby="semi-circle-down-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="semi-circle-right" role="button" tabindex="0"
+        aria-label="Semi-circle pointing right" aria-describedby="semi-circle-right-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="semi-circle-left" role="button" tabindex="0"
+        aria-label="Semi-circle pointing left" aria-describedby="semi-circle-left-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="triangle-up" role="button" tabindex="0"
+        aria-label="Triangle pointing up" aria-describedby="triangle-up-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="triangle-down" role="button" tabindex="0"
+        aria-label="Triangle pointing down" aria-describedby="triangle-down-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="triangle-right" role="button" tabindex="0"
+        aria-label="Triangle pointing right" aria-describedby="triangle-right-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="triangle-left" role="button" tabindex="0"
+        aria-label="Triangle pointing left" aria-describedby="triangle-left-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="trapezium" role="button" tabindex="0" aria-label="Trapezium shape"
+        aria-describedby="trapezium-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="parallelogram" role="button" tabindex="0"
+        aria-label="Parallelogram shape" aria-describedby="parallelogram-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="capsule" role="button" tabindex="0" aria-label="Capsule shape"
+        aria-describedby="capsule-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="leaf" role="button" tabindex="0" aria-label="Leaf shape"
+        aria-describedby="leaf-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="triangle-top-left" role="button" tabindex="0"
+        aria-label="Triangle in top-left corner" aria-describedby="triangle-top-left-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="triangle-top-right" role="button" tabindex="0"
+        aria-label="Triangle in top-right corner" aria-describedby="triangle-top-right-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="triangle-bottom-left" role="button" tabindex="0"
+        aria-label="Triangle in bottom-left corner" aria-describedby="triangle-bottom-left-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="triangle-bottom-right" role="button" tabindex="0"
+        aria-label="Triangle in bottom-right corner" aria-describedby="triangle-bottom-right-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
+      <div class="animation-wrapper" data-shape="rhombus" role="button" tabindex="0" aria-label="Rhombus shape"
+        aria-describedby="rhombus-desc">
+        <span class="border-animation" aria-hidden="true"></span>
+      </div>
     </section>
-  </body>
+  </main>
+
+  <footer>
+    <p>Interactive Geometric Shapes Gallery &copy; 2025. Hover over shapes to see animations.</p>
+  </footer>
+</body>
+
 </html>
