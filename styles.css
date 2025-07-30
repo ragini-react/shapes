@@ -31,42 +31,10 @@
     display: none;
 }
 
-/* Header Styles */
-header {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
 /* Main Content */
 main {
     min-height: calc(100vh - 200px);
 }
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: #f8f9fa;
-    color: #6c757d;
-    margin-top: 2rem;
-    border-top: 1px solid #e9ecef;
-}
-
 
 section {
     display: grid;
@@ -79,7 +47,6 @@ section {
 }
 
 section>div {
-    /* border: 1px dashed lightblue; */
     display: grid;
     place-items: center;
 }
@@ -92,111 +59,6 @@ section>div[data-shape]::after {
     z-index: 9;
 }
 
-
-section>div[data-shape="square"]::after {
-    width: var(--shape-size);
-    height: var(--shape-size);
-}
-
-section>div[data-shape="circle"]::after {
-    width: var(--shape-size);
-    height: var(--shape-size);
-    border-radius: 50%;
-}
-
-section>div[data-shape="rectangle"]::after {
-    width: var(--shape-size);
-    height: calc(var(--shape-size) / 2);
-}
-
-
-section>div[data-shape="ellipse"]::after {
-    width: var(--shape-size);
-    height: calc(var(--shape-size) / 2);
-    border-radius: 50%;
-}
-
-section>div[data-shape="semi-circle-up"]::after {
-    width: var(--shape-size);
-    height: calc(var(--shape-size) / 2);
-    border-top-left-radius: 160px;
-    border-top-right-radius: 160px;
-
-}
-
-section>div[data-shape="semi-circle-down"]::after {
-    width: var(--shape-size);
-    height: calc(var(--shape-size) / 2);
-    border-bottom-left-radius: 160px;
-    border-bottom-right-radius: 160px;
-
-}
-
-section>div[data-shape="semi-circle-right"]::after {
-    width: calc(var(--shape-size) / 2);
-    height: var(--shape-size);
-    border-bottom-right-radius: 160px;
-    border-top-right-radius: 160px;
-
-}
-
-section>div[data-shape="semi-circle-left"]::after {
-    width: calc(var(--shape-size) / 2);
-    height: var(--shape-size);
-    border-bottom-left-radius: 160px;
-    border-top-left-radius: 160px;
-}
-
-section>div[data-shape="triangle-up"]::after {
-    background: none;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 100px solid var(--shape-fill-color);
-}
-
-section>div[data-shape="triangle-down"]::after {
-    background: none;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-top: 100px solid var(--shape-fill-color);
-}
-
-section>div[data-shape="triangle-right"]::after {
-    background: none;
-    border-top: 100px solid transparent;
-    border-bottom: 100px solid transparent;
-    border-left: 100px solid var(--shape-fill-color);
-}
-
-section>div[data-shape="triangle-left"]::after {
-    background: none;
-    border-top: 100px solid transparent;
-    border-bottom: 100px solid transparent;
-    border-right: 100px solid var(--shape-fill-color);
-}
-
-section>div[data-shape="trapezium"]::after {
-    background: none;
-    width: calc(var(--shape-size) / 2);
-    border-bottom: 80px solid var(--shape-fill-color);
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-}
-
-section>div[data-shape="parallelogram"]::after {
-    background-color: var(--shape-fill-color);
-    width: var(--shape-size);
-    height: calc(var(--shape-size) / 2);
-    transform: skew(20deg);
-    -webkit-transform: skew(20deg);
-}
-
-section>div[data-shape="capsule"]::after {
-    background-color: var(--shape-fill-color);
-    width: var(--shape-size);
-    height: calc(var(--shape-size) / 1.5);
-    border-radius: 50px;
-}
 
 section>div[data-shape="leaf"]::after {
     background-color: var(--shape-fill-color);
@@ -238,6 +100,401 @@ section>div[data-shape="rhombus"]::after {
     -webkit-transform: rotate(45deg);
 }
 
+section>div[data-shape="heart"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    border-radius: 50%;
+    transform: rotate(45deg) skew(-10deg, -10deg);
+}
+
+section>div[data-shape="star"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+section>div[data-shape="moon"]::after {
+    width: calc(var(--shape-size) / 2);
+    height: calc(var(--shape-size) / 2);
+    border-radius: 50%;
+    box-shadow: calc(var(--shape-size) / 10.7) calc(var(--shape-size) / 10.7) 0 0 var(--shape-fill-color);
+    background: transparent;
+}
+
+section>div[data-shape="octagon"]::after {
+    width: calc(var(--shape-size) / 1.6);
+    height: calc(var(--shape-size) / 1.6);
+    background: var(--shape-fill-color);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+section>div[data-shape="cross"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(20% 0%, 80% 0%, 80% 20%, 100% 20%, 100% 80%, 80% 80%, 80% 100%, 20% 100%, 20% 80%, 0% 80%, 0% 20%, 20% 20%);
+}
+
+section>div[data-shape="plus"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(40% 0%, 60% 0%, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0% 60%, 0% 40%, 40% 40%);
+}
+
+section>div[data-shape="pentagon"]::after {
+    background: none;
+    border-width: 50px 18px 0;
+    border-style: solid;
+    border-color: var(--shape-fill-color) transparent;
+}
+
+section>div[data-shape="egg"]::after {
+    width: calc(var(--shape-size) / 2.3);
+    height: calc(var(--shape-size) / 1.6);
+    background: var(--shape-fill-color);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+section>div[data-shape="droplet"]::after {
+    width: calc(var(--shape-size) / 2);
+    height: calc(var(--shape-size) / 2);
+    background: var(--shape-fill-color);
+    border-radius: 50% 0 50% 50%;
+    transform: rotate(-45deg);
+}
+
+section>div[data-shape="arrow"]::after {
+    background: none;
+    border-top: calc(var(--shape-size) / 4) solid transparent;
+    border-bottom: calc(var(--shape-size) / 4) solid transparent;
+    border-left: calc(var(--shape-size) / 1.5) solid var(--shape-fill-color);
+}
+
+section>div[data-shape="triangle-arrow"]::after {
+    background: none;
+    border-left: calc(var(--shape-size) / 2) solid transparent;
+    border-right: calc(var(--shape-size) / 2) solid transparent;
+    border-bottom: calc(var(--shape-size) / 1.5) solid var(--shape-fill-color);
+}
+
+section>div[data-shape="diamond-square"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    transform: rotate(45deg);
+    border-radius: 10%;
+}
+
+section>div[data-shape="shield"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+section>div[data-shape="flower"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 90% 70%, 80% 90%, 50% 85%, 20% 90%, 10% 70%, 0% 35%, 20% 10%);
+}
+
+section>div[data-shape="lightning"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(30% 0%, 60% 0%, 40% 40%, 70% 40%, 40% 100%, 10% 100%, 30% 60%, 0% 60%);
+}
+
+section>div[data-shape="house"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
+}
+
+section>div[data-shape="chevron"]::after {
+    background: none;
+    border-top: calc(var(--shape-size) / 6) solid var(--shape-fill-color);
+    border-right: calc(var(--shape-size) / 6) solid var(--shape-fill-color);
+    width: calc(var(--shape-size) / 2);
+    height: calc(var(--shape-size) / 2);
+    transform: rotate(45deg);
+}
+
+section>div[data-shape="bowtie"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%, 40% 50%);
+}
+
+section>div[data-shape="kite"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 80%, 0% 50%);
+}
+
+section>div[data-shape="gem"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(50% 0%, 80% 20%, 100% 60%, 50% 100%, 0% 60%, 20% 20%);
+}
+
+section>div[data-shape="crown"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(0% 100%, 20% 40%, 40% 70%, 50% 20%, 60% 70%, 80% 40%, 100% 100%);
+}
+
+section>div[data-shape="bell"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(40% 0%, 60% 0%, 80% 30%, 90% 70%, 10% 70%, 20% 30%);
+}
+
+section>div[data-shape="fish"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(0% 50%, 40% 0%, 70% 20%, 100% 50%, 70% 80%, 40% 100%);
+}
+
+section>div[data-shape="rocket"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(50% 0%, 70% 30%, 60% 100%, 40% 100%, 30% 30%);
+}
+
+section>div[data-shape="tree"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(50% 0%, 80% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 20% 60%);
+}
+
+section>div[data-shape="sun"] {
+    position: relative;
+}
+
+section>div[data-shape="sun"]::after {
+    content: '';
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 2.5);
+    height: calc(var(--shape-size) / 2.5);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+section>div[data-shape="sun"]::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(var(--shape-size) / 1.2);
+    height: calc(var(--shape-size) / 1.2);
+    background: var(--shape-fill-color);
+    clip-path: polygon(50% 0%, 55% 35%, 50% 50%, 45% 35%, 50% 0%, 85% 15%, 65% 35%, 50% 50%, 65% 65%, 85% 85%, 50% 100%, 65% 65%, 50% 50%, 35% 65%, 50% 100%, 15% 85%, 35% 65%, 50% 50%, 35% 35%, 15% 15%);
+    z-index: 1;
+}
+
+section>div[data-shape="snowflake"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(50% 0%, 55% 45%, 100% 50%, 55% 55%, 50% 100%, 45% 55%, 0% 50%, 45% 45%);
+}
+
+section>div[data-shape="anchor"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(50% 0%, 60% 20%, 80% 20%, 80% 40%, 70% 40%, 70% 80%, 90% 80%, 90% 100%, 10% 100%, 10% 80%, 30% 80%, 30% 40%, 20% 40%, 20% 20%, 40% 20%);
+}
+
+section>div[data-shape="key"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(0% 40%, 0% 60%, 60% 60%, 60% 80%, 80% 80%, 80% 20%, 60% 20%, 60% 40%);
+}
+
+section>div[data-shape="lock"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(20% 40%, 20% 20%, 80% 20%, 80% 40%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
+}
+
+section>div[data-shape="wifi"]::after {
+    background: none;
+    border: calc(var(--shape-size) / 8) solid var(--shape-fill-color);
+    border-bottom: none;
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 2);
+    border-radius: calc(var(--shape-size) / 1.5) calc(var(--shape-size) / 1.5) 0 0;
+}
+
+section>div[data-shape="usb"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(30% 0%, 70% 0%, 70% 30%, 100% 30%, 100% 70%, 70% 70%, 70% 100%, 30% 100%, 30% 70%, 0% 70%, 0% 30%, 30% 30%);
+}
+
+section>div[data-shape="bluetooth"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(50% 0%, 80% 30%, 60% 50%, 80% 70%, 50% 100%, 40% 90%, 40% 60%, 20% 80%, 20% 60%, 40% 40%, 40% 10%);
+}
+
+section>div[data-shape="phone"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 2);
+    height: calc(var(--shape-size) / 1.2);
+    border-radius: calc(var(--shape-size) / 10);
+}
+
+section>div[data-shape="mouse"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 2);
+    height: calc(var(--shape-size) / 1.3);
+    border-radius: calc(var(--shape-size) / 4) calc(var(--shape-size) / 4) calc(var(--shape-size) / 8) calc(var(--shape-size) / 8);
+}
+
+section>div[data-shape="keyboard"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.2);
+    height: calc(var(--shape-size) / 2.5);
+    border-radius: calc(var(--shape-size) / 20);
+}
+
+section>div[data-shape="banana"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 4);
+    border-radius: calc(var(--shape-size) / 8);
+    transform: rotate(-30deg);
+    border-radius: 0 calc(var(--shape-size) / 4) calc(var(--shape-size) / 4) 0;
+}
+
+section>div[data-shape="pizza"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+section>div[data-shape="bus"] {
+    position: relative;
+}
+
+section>div[data-shape="bus"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.1);
+    height: calc(var(--shape-size) / 1.8);
+    border-radius: calc(var(--shape-size) / 20);
+}
+
+section>div[data-shape="skateboard"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.2);
+    height: calc(var(--shape-size) / 8);
+    border-radius: calc(var(--shape-size) / 4);
+}
+
+section>div[data-shape="lightning"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(30% 0%, 60% 35%, 40% 35%, 70% 100%, 40% 65%, 60% 65%);
+}
+
+section>div[data-shape="shield"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.3);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+section>div[data-shape="flame"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.8);
+    height: calc(var(--shape-size) / 1.2);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    transform: rotate(-15deg);
+}
+
+section>div[data-shape="mountain"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.2);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(0% 100%, 30% 20%, 50% 0%, 70% 20%, 100% 100%);
+}
+
+section>div[data-shape="puzzle"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    clip-path: polygon(0% 0%, 40% 0%, 40% 20%, 60% 20%, 60% 0%, 100% 0%, 100% 40%, 80% 40%, 80% 60%, 100% 60%, 100% 100%, 60% 100%, 60% 80%, 40% 80%, 40% 100%, 0% 100%, 0% 60%, 20% 60%, 20% 40%, 0% 40%);
+}
+
+section>div[data-shape="hourglass"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.8);
+    height: calc(var(--shape-size) / 1.2);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 50% 50%, 100% 80%, 100% 100%, 0% 100%, 0% 80%, 50% 50%, 0% 20%);
+}
+
+section>div[data-shape="leaf-1"]::after {
+    content: '';
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50% 10% 50% 10%;
+}
+
+section>div[data-shape="spiral"]::after {
+    background: none;
+    border: calc(var(--shape-size) / 12) solid var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(45deg);
+}
+
+section>div[data-shape="minus"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 6);
+}
+
+section>div[data-shape="circle"]::after {
+    background: var(--shape-fill-color);
+    width: calc(var(--shape-size) / 1.5);
+    height: calc(var(--shape-size) / 1.5);
+    border-radius: 50%;
+}
 
 /* Animations */
 .animation-wrapper {
@@ -246,7 +503,6 @@ section>div[data-shape="rhombus"]::after {
 
 .animation-wrapper::before {
     content: '';
-    /* background: var(--background-color); */
     position: absolute;
     inset: var(--border-animation-width);
     z-index: 1;
@@ -400,11 +656,6 @@ section>div[data-shape="rhombus"]::after {
 @media (prefers-contrast: high) {
     .animation-wrapper {
         border: 2px solid;
-    }
-
-    header {
-        background: #000;
-        color: #fff;
     }
 }
 
